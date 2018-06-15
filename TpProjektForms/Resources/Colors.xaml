@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:TpProjektForms">
+    <SolidColorBrush x:Key="BgDarkDarker" Color="#1A1A1A"/>
+    <SolidColorBrush x:Key="BgDark" Color="#2F2F2F"/>
+    <SolidColorBrush x:Key="BgDarkLight" Color="#1E2A2D"/>
+    <SolidColorBrush x:Key="FlatSecondary" Color="#2C3E4F" />
+    <SolidColorBrush x:Key="FlatFirst" Color="#719F6B"/>
+    <SolidColorBrush x:Key="FlatSecond" Color="#AAB4B5"/>
+    <SolidColorBrush x:Key="FlatThird" Color="#C6C6C6"/>
+    
+    
+</ResourceDictionary>

@@ -1,0 +1,145 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:assembly="clr-namespace:TpProjektForms.ViewModels.Assembly"
+                    xmlns:utils="clr-namespace:TpProjektForms.Utility"
+                    xmlns:treeView="clr-namespace:TpProjektForms.ViewModels.TreeView">
+
+    <utils:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    <utils:InverseBooleanToVisibilityConverter x:Key="InverseBooleanToVisibilityConverter"/>
+    <assembly:AssemblyViewModel x:Key="AssemblyViewModel"/>
+
+<!-- Side Menu Button -->
+    <Style TargetType="{x:Type Button}" x:Key="NavbarBtn">
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Name="BtnBorder"
+                            BorderThickness="0,0,0,10"
+                            BorderBrush="Transparent"
+                            Background="{x:Null}">
+                        <ContentPresenter/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="BtnBorder" 
+                                    Property="BorderBrush"
+                                    Value="{StaticResource BgDarkDarker}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource NavbarBtn}" x:Key="NavbarBtnCreme">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Name="BtnBorder"
+                            BorderThickness="0,0,0,10"
+                            BorderBrush="{StaticResource FlatSecond}"
+                            Background="{StaticResource FlatSecond}">
+                        <ContentPresenter/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="BtnBorder" 
+                                    Property="BorderBrush"
+                                    Value="{StaticResource BgDarkDarker}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource NavbarBtn}" x:Key="NavbarBtnGreen">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Name="BtnBorder"
+                            BorderThickness="0,0,0,10"
+                            BorderBrush="{StaticResource FlatFirst}"
+                            Background="{StaticResource FlatFirst}">
+                        <ContentPresenter/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="BtnBorder" 
+                                    Property="BorderBrush"
+                                    Value="{StaticResource BgDarkDarker}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource NavbarBtn}" x:Key="NavbarBtnCrimson">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Name="BtnBorder"
+                            BorderThickness="0,0,0,10"
+                            BorderBrush="{StaticResource FlatThird}"
+                            Background="{StaticResource FlatThird}">
+                        <ContentPresenter/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="BtnBorder" 
+                                    Property="BorderBrush"
+                                    Value="{StaticResource BgDarkDarker}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Side Menu Button Label-->
+    <Style TargetType="{x:Type Label}" x:Key="SideMenuBtnLabel">
+        <Setter Property="Foreground" Value="#2f2f2f"/>
+        <Setter Property="FontFamily" Value="Franklin Gothic Medium"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+    </Style>
+
+    <!-- Side Menu Button Icon-->
+    <Style TargetType="{x:Type Image}" x:Key="SideMenuBtnImage">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Width" Value="50"/>
+        <Setter Property="Height" Value="50"/>
+    </Style>
+
+    <!-- Gradient background -->
+    <Style TargetType="{x:Type Border}" x:Key="BgGradientBlue">
+        <Setter Property="BorderThickness" Value="0,0,0,0"/>
+        <Setter Property="BorderBrush" Value="{x:Null}"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
+                    <GradientStop Color="#2977d1" Offset="0"/>
+                    <GradientStop Color="#234d9b" Offset="0.567"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type Border}" x:Key="BgGradientDark">
+        <Setter Property="BorderThickness" Value="0,0,0,0"/>
+        <Setter Property="BorderBrush" Value="{x:Null}"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
+                    <GradientStop Color="#293A44" Offset="0"/>
+                    <GradientStop Color="#1D2C34" Offset="0.567"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>
